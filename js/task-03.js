@@ -15,14 +15,11 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
+const ulElement = document.querySelector('#gallery');
+const imageMake = images.map(image => {
+  return `<li><img class="img" src="${image.url}" alt="${image.alt}" /></li>`;
+});
+const imageMakeJoin = imageMake.join('');
 
-const imgEl = document.createElement('img');
-imgEl.src =
-  'https://images.pexels.com/photos/140134/pexels-photo-140134.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260';
-console.log(imgEl);
-
-const liElement = document.createElement('li');
-console.log(liElement);
-
-liElement.appendChild(imgEl);
-console.log();
+ulElement.insertAdjacentHTML('beforeend', imageMakeJoin);
+console.log(ulElement);
