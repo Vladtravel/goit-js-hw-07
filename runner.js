@@ -1,29 +1,29 @@
-const { exec } = require('child_process')
-const fs = require('fs')
-const file = process.argv[2]
-const filePath = file
-const exist = fs.existsSync(filePath)
+const { exec } = require('child_process');
+const fs = require('fs');
+const file = process.argv[2];
+const filePath = file;
+const exist = fs.existsSync(filePath);
 
 if (!exist) {
-  console.error(`File "${file}" is not exist`)
-  process.exit()
-} 
+  console.error(`File "${file}" is not exist`);
+  process.exit();
+}
 
-console.clear()
+console.clear();
 
 const runFile = () => {
   exec(`node ${filePath}`, (_err, stdout, stderr) => {
     if (stdout || stderr) {
-      console.clear()
-      console.log(stdout || stderr)
+      console.clear();
+      console.log(stdout || stderr);
     } else {
-      return
+      return;
     }
-  })
-}
+  });
+};
 
-runFile()
+runFile();
 
 fs.watch(filePath, () => {
-  runFile()
-})
+  runFile();
+});
