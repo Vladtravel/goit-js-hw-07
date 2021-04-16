@@ -1,8 +1,6 @@
-const totalItems = document.querySelectorAll('#categories .item');
-
-console.log(`В списке ${totalItems.length} категории.`);
-
 const categories = document.querySelectorAll('#categories .item');
+
+console.log(`В списке ${categories.length} категории.`);
 
 categories.forEach(category =>
   console.log(
