@@ -17,3 +17,13 @@
 #validation-input.invalid {
   border-color: #f44336;
 }
+
+.box1 {
+  background: yellow;
+  width: 30px;
+  height: 30px;
+  padding: 50px;
+  margin: 10px;
+  border: 2px solid blue;
+  display: inline-block;
+}

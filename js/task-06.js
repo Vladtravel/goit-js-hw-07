@@ -8,6 +8,7 @@ function oninputChange(event) {
   if (lengthNum === event.currentTarget.value.length) {
     inputEl.classList.add('valid');
     console.log('Добро пожаловать');
+    inputEl.classList.value = 'valid';
     return;
   } else inputEl.classList.add('invalid');
   console.log('Неверное колличество символов');
